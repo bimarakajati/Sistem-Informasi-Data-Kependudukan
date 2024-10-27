@@ -1,18 +1,18 @@
 <?php
-    //Mulai Sesion
-    session_start();
-    if (isset($_SESSION["ses_username"])==""){
-	header("location: login.php");
-    
-    }else{
-      $data_id = $_SESSION["ses_id"];
-      $data_nama = $_SESSION["ses_nama"];
-      $data_user = $_SESSION["ses_username"];
-	  $data_level = $_SESSION["ses_level"];
-    }
+session_start();
+if (!isset($_SESSION["ses_username"])) {
+    header("location: login.php");
+    exit(); // Ensure no further code executes
+}
 
-    //KONEKSI DB
-    include "inc/koneksi.php";
+// Store session variables in local variables if needed
+$data_id = $_SESSION["ses_id"];
+$data_nama = $_SESSION["ses_nama"];
+$data_user = $_SESSION["ses_username"];
+$data_level = $_SESSION["ses_level"];
+
+//KONEKSI DB
+include "inc/koneksi.php";
 ?>
 
 <!DOCTYPE html>
