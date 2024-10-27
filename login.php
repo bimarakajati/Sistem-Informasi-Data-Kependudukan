@@ -1,6 +1,6 @@
 <?php
-  include "inc/koneksi.php";
-   
+session_start(); // Start the session
+include "inc/koneksi.php";
 ?>
 
 <!DOCTYPE html>
