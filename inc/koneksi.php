@@ -1,2 +1,2 @@
 <?php
-$koneksi = new mysqli ("localhost","root","","data_penduduk");
+$koneksi = new mysqli ("127.0.0.1","root","","data_penduduk");
